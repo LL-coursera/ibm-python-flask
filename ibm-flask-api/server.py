@@ -1,7 +1,7 @@
-from flask import Flask, make_response,request # type: ignore
+from flask import Flask, make_response,request 
 
 # Create an instance of the Flask class, passing in the name of the current module
-app = Flask(__name__)
+app = Flask("My app")
 data = [
     {
         "id": "3b58aade-8415-49dd-88db-8d7bce14932a",
@@ -184,3 +184,6 @@ def api_not_found(error):
     # This function is a custom error handler for 404 Not Found errors
     # It is triggered whenever a 404 error occurs within the Flask application
     return {"message": "API not found"}, 404
+
+if __name__ == "__main__":
+    app.run(debug=True)
