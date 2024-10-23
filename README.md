@@ -15,3 +15,5 @@ mv emotion_detection.py EmotionDetection/emotion_detection.py
 pip3 install pylint==2.11.1
 
 then:  pylint sample1.py
+
+# Building Generative AI-Powered Applications with Python
