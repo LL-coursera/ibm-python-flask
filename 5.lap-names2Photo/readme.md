@@ -10,3 +10,20 @@
     touch image_captioning_app.py
     pip3 install gradio
     pip3 install gradio transformers Pillow
+
+
+# deploy
+    touch demo.py Dockerfile requirements.txt
+    ibmcloud ce project get current
+    ibmcloud ce project get --name "Code Engine - sn-labs-locluu1990"
+
+    cd 
+
+    ibmcloud ce build create --name build-local-dockerfile1 \
+                        --build-type local --size large \
+                        --image us.icr.io/${SN_ICR_NAMESPACE}/myapp1 \
+                        --registry-secret icr-secret
+                        /
+
+https://demo1.1ndyawo7vy44.us-south.codeengine.appdomain.cloud
+
